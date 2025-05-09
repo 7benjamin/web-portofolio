@@ -48,12 +48,11 @@ const Projects: React.FC = () => {
       <div className="section-container">
         <div className="text-center mb-16">
           <div className="inline-block bg-portfolio-light-blue px-4 py-1 rounded-full mb-4">
-            <p className="text-portfolio-blue font-medium">Proyek</p>
+            <p className="text-portfolio-blue font-medium">Projects</p>
           </div>
-          <h2 className="text-3xl font-bold text-portfolio-dark mb-4">Karya Terbaru Saya</h2>
+          <h2 className="text-3xl font-bold text-portfolio-dark mb-4">Things I've Built</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Berikut adalah beberapa proyek yang telah saya kerjakan dengan menggunakan 
-            berbagai teknologi seperti ReactJS, VueJS, dan Android development.
+          Over the years, I’ve had the chance to work on various projects across web and mobile platforms. Each one taught me something new and sharpened my skills in ReactJS, VueJS, and Android development.
           </p>
         </div>
         

@@ -6,20 +6,19 @@ const skillCategories = [
     title: "Frontend Development",
     skills: [
       { name: "ReactJS", level: 90 },
-      { name: "VueJS", level: 85 },
-      { name: "HTML/CSS", level: 95 },
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 80 },
-      { name: "Tailwind CSS", level: 85 }
+      { name: "VueJS", level: 80 },
+      { name: "HTML/CSS", level: 85 },
+      { name: "JavaScript", level: 80 },
+      { name: "TypeScript", level: 90 },
+      { name: "Tailwind CSS", level: 95 }
     ]
   },
   {
     title: "Mobile Development",
     skills: [
-      { name: "Java", level: 85 },
+      { name: "Java", level: 90 },
       { name: "Kotlin", level: 80 },
-      { name: "Android SDK", level: 85 },
-      { name: "React Native", level: 75 }
+      { name: "Android SDK", level: 85 }
     ]
   },
   {
@@ -27,8 +26,7 @@ const skillCategories = [
     skills: [
       { name: "Git", level: 90 },
       { name: "RESTful API", level: 85 },
-      { name: "Node.js", level: 75 },
-      { name: "UI/UX Design", level: 70 }
+      { name: "Figma", level: 70 }
     ]
   }
 ];
@@ -39,12 +37,11 @@ const Skills: React.FC = () => {
       <div className="section-container">
         <div className="text-center mb-16">
           <div className="inline-block bg-portfolio-light-blue px-4 py-1 rounded-full mb-4">
-            <p className="text-portfolio-blue font-medium">Keahlian</p>
+            <p className="text-portfolio-blue font-medium">Skills</p>
           </div>
-          <h2 className="text-3xl font-bold text-portfolio-dark mb-4">Teknologi yang Saya Kuasai</h2>
+          <h2 className="text-3xl font-bold text-portfolio-dark mb-4">Tech Stack</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Berikut adalah daftar teknologi dan alat yang saya gunakan untuk membangun aplikasi web 
-            dan mobile yang modern, responsif, dan user-friendly.
+          A curated list of technologies I work with to build web and mobile apps that are fast, scalable, and intuitive.
           </p>
         </div>
         

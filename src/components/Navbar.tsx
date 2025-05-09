@@ -16,16 +16,15 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <a href="#home" className="flex items-center space-x-2">
             <Code size={28} className="text-portfolio-blue" />
-            <span className="text-xl font-bold text-portfolio-dark">Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="nav-link">Beranda</a>
-            <a href="#about" className="nav-link">Tentang</a>
-            <a href="#skills" className="nav-link">Keahlian</a>
-            <a href="#projects" className="nav-link">Proyek</a>
-            <a href="#contact" className="nav-link">Kontak</a>
+            <a href="#home" className="nav-link">Home</a>
+            <a href="#about" className="nav-link">About</a>
+            <a href="#skills" className="nav-link">Skills</a>
+            <a href="#projects" className="nav-link">Project</a>
+            {/* <a href="#contact" className="nav-link">Contact</a> */}
           </nav>
 
           <div className="hidden md:block">
@@ -49,11 +48,11 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white">
           <div className="px-4 pt-2 pb-6 space-y-3">
-            <a href="#home" className="nav-link block py-2" onClick={toggleMenu}>Beranda</a>
-            <a href="#about" className="nav-link block py-2" onClick={toggleMenu}>Tentang</a>
-            <a href="#skills" className="nav-link block py-2" onClick={toggleMenu}>Keahlian</a>
-            <a href="#projects" className="nav-link block py-2" onClick={toggleMenu}>Proyek</a>
-            <a href="#contact" className="nav-link block py-2" onClick={toggleMenu}>Kontak</a>
+            <a href="#home" className="nav-link block py-2" onClick={toggleMenu}>Home</a>
+            <a href="#about" className="nav-link block py-2" onClick={toggleMenu}>About</a>
+            <a href="#skills" className="nav-link block py-2" onClick={toggleMenu}>Skills</a>
+            <a href="#projects" className="nav-link block py-2" onClick={toggleMenu}>Project</a>
+            {/* <a href="#contact" className="nav-link block py-2" onClick={toggleMenu}>Contact</a> */}
             <Button className="btn-primary w-full mt-4">
               Download CV
             </Button>

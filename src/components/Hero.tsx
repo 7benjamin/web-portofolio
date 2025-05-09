@@ -9,20 +9,34 @@ const Hero: React.FC = () => {
       <div className="section-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="animate-fade-in">
-            <h2 className="text-lg font-semibold text-portfolio-blue mb-2">Halo, Saya adalah</h2>
+          {/* Mobile image */}
+          <div className="flex justify-center md:hidden mb-8">
+            <img
+            src="/images/profpic.jpeg"
+            alt="Developer"
+            className="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg"
+            />
+            </div>
+            <h2 className="text-lg font-semibold text-portfolio-blue mb-2">Halo, I'm</h2>
             <h1 className="text-4xl md:text-5xl font-bold text-portfolio-dark mb-4">Benyamin Saut Oloan</h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Membangun aplikasi web dan mobile dengan pengalaman menggunakan ReactJS, VueJS, dan Android development (Java/Kotlin).
+            A frontend specialist who crafts fast, elegant web apps with React and Vue. I also build Android apps in Java and Kotlin. I turn complex problems into simple, delightful interfaces.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="btn-primary flex items-center gap-2">
-                Lihat Proyek <ArrowRight size={16} />
-              </Button>
+            <Button asChild>
+                <a href="#projects" className="nav-link">
+                    My Project <ArrowRight size={16} />
+                </a>
+            </Button>
+
               <Button variant="outline" className="btn-outline">
-                Hubungi Saya
+                <a href="mailto:benyaminsaut@gmail.com" className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+                  Contact
+                </a>
               </Button>
             </div>
           </div>
+          {/* Desktop image */}
           <div className="hidden md:flex justify-end animate-fade-in">
             <div className="relative">
               <div className="w-72 h-72 md:w-80 md:h-80 bg-portfolio-blue/10 rounded-full"></div>
