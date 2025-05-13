@@ -5,33 +5,15 @@ const About: React.FC = () => {
   return (
     <section id="about" className="bg-white">
       <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Desktop image */}
-          <div className="relative hidden md:block">
-            <div className="w-full h-80 bg-portfolio-blue/5 rounded-lg"></div>
-            <img
-              src="/images/aboutme.jpeg"
-              alt="About me"
-              className="absolute -top-8 -right-8 w-full h-80 object-cover rounded-lg shadow-lg"
-            />
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-portfolio-blue/10 rounded-lg"></div>
-          </div>
-          {/* Mobile image */}
-          <div className="relative block md:hidden mb-6"> 
-          <img
-            src="/images/aboutme.jpeg"
-            alt="About me"
-           className="w-full h-60 object-cover rounded-lg shadow-lg"
-          />
-        </div>
-          
-          <div>
+        <div className="gap-12 items-center">
+          <div className='text-center'>
             <div className="inline-block bg-portfolio-light-blue px-4 py-1 rounded-full mb-4">
               <p className="text-portfolio-blue font-medium">About Me</p>
             </div>
             <h2 className="text-3xl font-bold text-portfolio-dark mb-6">
               Let’s turn ideas into real, user-friendly products.
             </h2>
+            <div className='text-left'>
             <p className="text-gray-600 mb-4">
             I’m a frontend developer with over 8 years of experience crafting responsive websites and mobile apps. I specialize in ReactJS and VueJS for web, and also develop Android apps with Java and Kotlin.
             </p>
@@ -44,6 +26,7 @@ const About: React.FC = () => {
             <p className="text-gray-600 mb-4">
             One more thing, I also interested with web3!
             </p>
+            </div>
             
             <div className="mt-8">
               <div className="grid grid-cols-2 gap-4">
