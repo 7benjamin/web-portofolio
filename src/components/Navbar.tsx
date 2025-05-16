@@ -28,9 +28,17 @@ const Navbar: React.FC = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Button className="btn-primary">
-              Download CV
-            </Button>
+            <a
+              href="https://res.cloudinary.com/dehbbqtu2/image/upload/fl_attachment/v1747191090/Benyamin_Saut_Oloan-resume_1_dnbmnn.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block"
+            >
+               <Button className="btn-primary w-full">
+                  Download CV
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -53,9 +61,17 @@ const Navbar: React.FC = () => {
             <a href="#skills" className="nav-link block py-2" onClick={toggleMenu}>Skills</a>
             <a href="#projects" className="nav-link block py-2" onClick={toggleMenu}>Project</a>
             {/* <a href="#contact" className="nav-link block py-2" onClick={toggleMenu}>Contact</a> */}
-            <Button className="btn-primary w-full mt-4">
-              Download CV
-            </Button>
+            <a
+              href="https://res.cloudinary.com/dehbbqtu2/image/upload/fl_attachment/v1747191090/Benyamin_Saut_Oloan-resume_1_dnbmnn.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full block"
+            >
+               <Button className="btn-primary w-full">
+                  Download CV
+              </Button>
+            </a>
           </div>
         </div>
       )}
