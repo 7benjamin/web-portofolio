@@ -1,44 +1,73 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Code, Menu, X } from "lucide-react";
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const location = useLocation();
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Effect to handle hash navigation when component mounts or location changes
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Get the element with the ID that matches the hash (without the #)
+      const sectionId = location.hash.substring(1);
+      const element = document.getElementById(sectionId);
+      
+      // If the element exists, scroll to it
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Small delay to ensure the page has fully loaded
+      }
+    }
+  }, [location]);
+
+  // Function to handle scroll to section on the homepage
+  const scrollToSection = (sectionId: string) => {
+    // Close mobile menu if it's open
+    if (isMenuOpen) setIsMenuOpen(false);
+    
+    // Only scroll if we're on the homepage
+    if (location.pathname === '/') {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're not on homepage, navigate to homepage first, then scroll
+      window.location.href = `/#${sectionId}`;
+    }
   };
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <a href="#home" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Code size={28} className="text-portfolio-blue" />
-          </a>
+            <span className="text-xl font-bold text-portfolio-dark">Portfolio</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="nav-link">Home</a>
-            <a href="#about" className="nav-link">About</a>
-            <a href="#skills" className="nav-link">Skills</a>
-            <a href="#projects" className="nav-link">Project</a>
-            {/* <a href="#contact" className="nav-link">Contact</a> */}
+            <button onClick={() => scrollToSection('home')} className="nav-link">Home</button>
+            <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
+            <button onClick={() => scrollToSection('skills')} className="nav-link">Skills</button>
+            <button onClick={() => scrollToSection('projects')} className="nav-link">Projects</button>
+            <button onClick={() => scrollToSection('footer')} className="nav-link">Contacts</button>
           </nav>
 
           <div className="hidden md:block">
-            <a
-              href="https://res.cloudinary.com/dehbbqtu2/image/upload/fl_attachment/v1747191090/Benyamin_Saut_Oloan-resume_1_dnbmnn.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block"
-            >
-               <Button className="btn-primary w-full">
-                  Download CV
-              </Button>
-            </a>
+            <Button className="btn-primary">
+              Download CV
+            </Button>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -56,22 +85,14 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white">
           <div className="px-4 pt-2 pb-6 space-y-3">
-            <a href="#home" className="nav-link block py-2" onClick={toggleMenu}>Home</a>
-            <a href="#about" className="nav-link block py-2" onClick={toggleMenu}>About</a>
-            <a href="#skills" className="nav-link block py-2" onClick={toggleMenu}>Skills</a>
-            <a href="#projects" className="nav-link block py-2" onClick={toggleMenu}>Project</a>
-            {/* <a href="#contact" className="nav-link block py-2" onClick={toggleMenu}>Contact</a> */}
-            <a
-              href="https://res.cloudinary.com/dehbbqtu2/image/upload/fl_attachment/v1747191090/Benyamin_Saut_Oloan-resume_1_dnbmnn.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block"
-            >
-               <Button className="btn-primary w-full">
-                  Download CV
-              </Button>
-            </a>
+            <button onClick={() => scrollToSection('home')} className="nav-link block py-2 w-full text-left">Home</button>
+            <button onClick={() => scrollToSection('about')} className="nav-link block py-2 w-full text-left">About</button>
+            <button onClick={() => scrollToSection('skills')} className="nav-link block py-2 w-full text-left">Skills</button>
+            <button onClick={() => scrollToSection('projects')} className="nav-link block py-2 w-full text-left">Projects</button>
+            <button onClick={() => scrollToSection('footer')} className="nav-link block py-2 w-full text-left">Contacts</button>
+            <Button className="btn-primary w-full mt-4">
+              Download CV
+            </Button>
           </div>
         </div>
       )}

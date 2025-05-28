@@ -4,6 +4,7 @@ import { Code, Github, Linkedin, Mail } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
+    <section id="footer">
     <footer className="bg-portfolio-dark text-white">
       <div className="section-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -56,6 +57,7 @@ const Footer: React.FC = () => {
         </div> */}
       </div>
     </footer>
+    </section>
   );
 };
 
