@@ -105,12 +105,32 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
-				}
+				},
+				  'slideImage1': {
+    				'0%': { opacity: '1' },
+    				'33%': { opacity: '0' },
+    				'66%': { opacity: '0' },
+    				'100%': { opacity: '1' },
+  				},
+				'slideImage2': {
+          			'0%': { opacity: '0' },
+          			'33%': { opacity: '1' },
+          			'66%': { opacity: '0' },
+          			'100%': { opacity: '0' },
+        		},
+        		'slideImage3': {
+          			'0%, 33%': { opacity: '0' },
+          			'66%': { opacity: '1' },
+          			'100%': { opacity: '0' },
+        		},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
+				'slideImage1': 'slideImage1 3s infinite',
+				'slideImage2': 'slideImage2 3s infinite',
+        		'slideImage3': 'slideImage3 3s infinite',
 			}
 		}
 	},

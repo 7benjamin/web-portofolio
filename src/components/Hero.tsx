@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero: React.FC = () => {
+
+  const profpic = "/images/profpic.jpeg"
+  // const profpic = "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747190434/profpic_rvnrrx.jpg"
   return (
     <section id="home" className="bg-gradient-to-br from-white to-portfolio-light-blue pt-28 pb-16">
       <div className="section-container">
@@ -12,7 +15,7 @@ const Hero: React.FC = () => {
           {/* Mobile image */}
           <div className="flex justify-center md:hidden mb-8">
             <img
-            src="/images/profpic.jpeg"
+            src={profpic}
             alt="Developer"
             className="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg"
             />
@@ -42,7 +45,7 @@ const Hero: React.FC = () => {
               <div className="w-72 h-72 md:w-80 md:h-80 bg-portfolio-blue/10 rounded-full"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
-                    src="/images/profpic.jpeg"
+                    src={profpic}
                     alt="Developer"
                   className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-lg"
                 />
