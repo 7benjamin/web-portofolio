@@ -16,7 +16,7 @@ const skillCategories = [
   {
     title: "Mobile Development",
     skills: [
-      { name: "Java", level: 90 },
+      { name: "Java", level: 95 },
       { name: "Kotlin", level: 80 },
       { name: "Android SDK", level: 85 }
     ]
