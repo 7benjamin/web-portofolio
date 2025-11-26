@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
           </div>
           <h2 className="text-3xl font-bold text-portfolio-dark mb-4">Things I've Built</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Over the years, I’ve had the chance to work on various projects across web and mobile platforms. Each one taught me something new and sharpened my skills in ReactJS, VueJS, and Android development.
+            Over the years, I’ve had the chance to work on various projects across web and mobile platforms. Each one taught me something new and sharpened my skills in ReactJS, VueJS, and Android development. I also have experience as a IT Project Manager, managing several projects more than 3 years
           </p>
         </div>
 
@@ -97,7 +97,7 @@ const Projects: React.FC = () => {
                   </h3>
                 {/* </Link> */}
                 <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
-                {project.codeLink != '#' &&
+                {project.codeLink != '' &&
                 <div className="flex items-center space-x-4">
                   <a href={project.codeLink} target="_blank" className="text-portfolio-blue hover:text-blue-700 flex items-center gap-1">
                     <Github size={16} />

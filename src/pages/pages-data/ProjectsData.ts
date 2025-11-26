@@ -49,28 +49,74 @@ export const projects: Project[] = [
       "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747731586/Porto_2_bsr63h.png",
     ],
   },
-  // {
-  //   id: "2",
-  //   title: "Android Absence System",
-  //   description: "No more paper, just quick check-ins right from your phone.",
-  //   image: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728396/WhatsApp_Image_2025-05-20_at_3.01.21_PM_vm2nrd.jpg",
-  //   image2: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728317/WhatsApp_Image_2025-05-20_at_3.02.44_PM_nrydlk.jpg",
-  //   image3: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728396/WhatsApp_Image_2025-05-20_at_3.03.50_PM_rtr2a5.jpg",
-  //   tags: ["Android", "Java"],
-  //   demoLink: "#",
-  //   codeLink: "https://github.com/7benjamin/AdaAbsensiOnline",
-  //   featured: true
-  // },
-  // {
-  //   id: "3",
-  //   title: "Product Branding Website",
-  //   description: "Led this project from 2021 to early 2024. I planning, keeping things on track, and making sure hit the goals",
-  //   image: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_1_mbat2p.png",
-  //   image2: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_2_gvmokn.png",
-  //   image3: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_3_gakpn7.png",
-  //   tags: ["IT Project Management", "Laravel"],
-  //   demoLink: "#",
-  //   codeLink: "#",
-  //   featured: true
-  // }
+  {
+    id: "2",
+    title: "Android Absence System",
+    description: "No more paper, just quick check-ins right from your phone.",
+    detailDescription: `
+      <p>Android Absence System is designed to bring accuracy, security, and simplicity to employee check-ins. Powered by <b>face recognition</b> and <b>GPS validation</b>, the system ensures every attendance is authentic, location-verified, and fully aligned with company policies.</p>
+
+      <p>Built with <b>Java Android</b>, the mobile app delivers a smooth, reliable experience—capturing real-time check-in and check-out data while preventing fraud and off-site attendance. Everything is crafted to support fast performance and effortless daily use.</p>
+
+      <p>The ecosystem is completed with a sleek <b>React JS web dashboard</b>, enabling companies to track attendance, explore detailed reports, and configure master data—employees, locations, schedules, and rules—with ease.</p>
+
+      <p><b>Key Advantages:</b></p>
+        <ul>
+           <li>Face recognition for secure, identity-verified attendance</li>
+           <li>Location-based validation to prevent off-site check-ins</li>
+           <li>Real-time analytics and reporting through a modern React dashboard</li>
+           <li>Flexible master data management for company-specific workflows</li>
+           <li>Seamless synergy between mobile app and web platform</li>
+           <li>Scalable structure suitable for teams of any size</li>
+       </ul>
+
+<p>This project encapsulates a modern, high-trust attendance solution—built to empower companies with stronger accuracy, smarter workflows, and a more reliable way to manage their workforce.</p>
+
+    `,
+    image: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728396/WhatsApp_Image_2025-05-20_at_3.01.21_PM_vm2nrd.jpg",
+    image2: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728317/WhatsApp_Image_2025-05-20_at_3.02.44_PM_nrydlk.jpg",
+    image3: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728396/WhatsApp_Image_2025-05-20_at_3.03.50_PM_rtr2a5.jpg",
+    tags: ["Android", "Java"],
+    demoLink: "",
+    codeLink: "https://github.com/7benjamin/AdaAbsensiOnline",
+    featured: true,
+    gallery: [
+      "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728396/WhatsApp_Image_2025-05-20_at_3.01.21_PM_vm2nrd.jpg",
+      "https://res.cloudinary.com/dehbbqtu2/image/upload/v1747728396/WhatsApp_Image_2025-05-20_at_3.03.50_PM_rtr2a5.jpg",
+    ],
+  },
+  {
+    id: "3",
+    title: "Product Branding Website",
+    description: "Let's make your company branding throught website!",
+    detailDescription: `
+      <pProduct Branding Website is a full-scale branding website created to elevate the digital presence of the company product line. The platform was designed to deliver a bold, modern brand experience that reflects the heritage, personality, and visual identity of the product.</p>
+
+<p>From late 2020 to the end of 2023, I managed the project called rockaroma.id, end-to-end — covering development, maintenance, feature enhancement, and overall site optimization. Built using <b>Laravel</b>, the system consists of two main environments: a <b>public-facing website</b> for brand storytelling and product presentation, and a <b>Content Management System (CMS)</b> for flexible content updates and internal workflow control.</p>
+
+<p>I managed the project with total 4 people. Among them is 1 programmer, 1 graphic design, 1 manual tester and i as a project manager.</p>
+
+<p><b>Key Advantages:</b></p>
+<ul>
+  <li>Modern brand-focused interface crafted for strong visual impact</li>
+  <li>Laravel-based architecture ensuring stability, security, and scalability</li>
+  <li>Dedicated CMS enabling dynamic content updates with ease</li>
+  <li>Optimized performance for smooth browsing across all devices</li>
+  <li>Structured content management supporting long-term brand growth</li>
+</ul>
+
+<p>This project represents a complete digital branding solution—connecting storytelling, design, and technology to create a cohesive and memorable brand experience for Aroma products.</p>
+    `,
+    image: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_1_mbat2p.png",
+    image2: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_2_gvmokn.png",
+    image3: "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_3_gakpn7.png",
+    tags: ["Project Management", "Website Branding", "Laravel"],
+    demoLink: "https://rockaroma.id/",
+    codeLink: "",
+    featured: true,
+    gallery: [
+      "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_1_mbat2p.png",
+      "https://res.cloudinary.com/dehbbqtu2/image/upload/v1748415255/rockaroma_3_gakpn7.png",
+    ],
+  },
 ];

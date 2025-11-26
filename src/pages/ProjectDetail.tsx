@@ -43,9 +43,9 @@ const ProjectDetail: React.FC = () => {
         <div className="flex-grow flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-portfolio-dark mb-4">Project Not Found</h1>
-            <p className="text-gray-600 mb-6">Proyek yang Anda cari tidak ditemukan.</p>
+            <p className="text-gray-600 mb-6">The project is not found. Find another project</p>
             <Link to="/#projects">
-              <Button className="btn-primary">Kembali ke Daftar Proyek</Button>
+              <Button className="btn-primary">Back</Button>
             </Link>
           </div>
         </div>
@@ -62,7 +62,7 @@ const ProjectDetail: React.FC = () => {
         <div className="section-container">
           <Link to="/#projects" className="inline-flex items-center text-portfolio-blue hover:underline mb-6">
             <ArrowLeft size={16} className="mr-1" />
-            <span>Kembali ke Daftar Proyek</span>
+            <span>Back</span>
           </Link>
 
           {/* Hero Section */}
@@ -70,7 +70,7 @@ const ProjectDetail: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-bold text-portfolio-dark mb-4">{project.title}</h1>
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map((tag, index) => (
-                <span key={index} className="text-xs bg-white text-portfolio-blue px-3 py-1 rounded-full">
+                <span key={index} className="text-xs bg-portfolio-blue text-white px-3 py-1 rounded-full">
                   {tag}
                 </span>
               ))}
